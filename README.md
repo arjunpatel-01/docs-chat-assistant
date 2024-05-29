@@ -2,25 +2,25 @@
 Documentation Chat Assistant component for `Next.js` using <a href='https://mui.com/material-ui/'>Material UI (MUI)</a> for component design and <a href='https://platform.openai.com/docs/api-reference/introduction'>OpenAI API</a> for AI Assistant integration and vector store.
 
 ## Contents
-- <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#tech-stack'>Tech Stack</a>
-  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#material-ui-mui'>Material UI (MUI)</a>
-  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#markdown-response-styling'>Markdown Response Styling</a>
-  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#html-parse'>HTML Parse</a>
-- <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#usage'>Usage</a>
-  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#installation'>Installation</a>
-  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#setup'>Setup</a>
-    - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#openai-tools'>OpenAI Tools</a>
-    - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#environment-variables'>Environment variables</a>
-    - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#front-end'>Front-end</a>
-    - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#backend'>Backend</a>
-      - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#assistant-api'>Assistant API</a>
-      - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#web-crawler-api'>Web Crawler API</a>
-- <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#styling'>Styling</a>
-  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#assistant-props'>Assistant Props</a>
-  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#fabprops'>FabProps</a>
-  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#modalprops'>ModalProps</a>
-  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#example'>Example</a>
-- <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#limitations-052024'>Limitations</a>
+- <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#tech-stack'>Tech Stack</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#material-ui-mui'>Material UI (MUI)</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#markdown-response-styling'>Markdown Response Styling</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#html-parse'>HTML Parse</a>
+- <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#usage'>Usage</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#installation'>Installation</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#setup'>Setup</a>
+    - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#openai-tools'>OpenAI Tools</a>
+    - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#environment-variables'>Environment variables</a>
+    - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#front-end'>Front-end</a>
+    - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#backend'>Backend</a>
+      - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#assistant-api'>Assistant API</a>
+      - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#web-crawler-api'>Web Crawler API</a>
+- <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#styling'>Styling</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#assistant-props'>Assistant Props</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#fabprops'>FabProps</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#modalprops'>ModalProps</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#example'>Example</a>
+- <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#limitations-052024'>Limitations</a>
 
 <br/>
 

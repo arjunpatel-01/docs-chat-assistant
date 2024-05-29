@@ -1,20 +1,43 @@
 # Docs Chat Assistant
-Open AI Chat Assistant component for `Next.js` using <a href='https://mui.com/material-ui/'>Material UI (MUI)</a> for component design and <a href='https://platform.openai.com/docs/api-reference/introduction'>OpenAI API</a> for AI Assistant integration and vector store.
+Documentation Chat Assistant component for `Next.js` using <a href='https://mui.com/material-ui/'>Material UI (MUI)</a> for component design and <a href='https://platform.openai.com/docs/api-reference/introduction'>OpenAI API</a> for AI Assistant integration and vector store.
 
-## Design Elements
-### Material UI (MUI)
+## Contents
+- <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#tech-stack'>Tech Stack</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#material-ui-mui'>Material UI (MUI)</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#markdown-response-styling'>Markdown Response Styling</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#html-parse'>HTML Parse</a>
+- <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#usage'>Usage</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#installation'>Installation</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#setup'>Setup</a>
+    - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#openai-tools'>OpenAI Tools</a>
+    - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#environment-variables'>Environment variables</a>
+    - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#front-end'>Front-end</a>
+    - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#backend'>Backend</a>
+      - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#assistant-api'>Assistant API</a>
+      - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#web-crawler-api'>Web Crawler API</a>
+- <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#styling'>Styling</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#assistant-props'>Assistant Props</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#fabprops'>FabProps</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#modalprops'>ModalProps</a>
+  - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#example'>Example</a>
+- <a href='https://github.com/arjunpatel-01/docs-chat-assistant/#limitations-052024'>Limitations</a>
+
+<br/>
+
+## Tech Stack
+#### Material UI (MUI)
 - <a href='https://mui.com/material-ui/react-dialog/'>`Dialog`</a>
 - <a href='https://mui.com/material-ui/react-floating-action-button/'>`Floating Action Button`</a>
 - <a href='https://mui.com/material-ui/api/icon-button/'>`Icon Button`</a>
 - <a href='https://mui.com/material-ui/material-icons/'>`Icons`</a>
-  - <a href='https://mui.com/material-ui/material-icons/?selected=Send'>`Send`</a>
-  - <a href='https://mui.com/material-ui/material-icons/?selected=AutoAwesome'>`AutoAwesome`</a>
-  - <a href='https://mui.com/material-ui/material-icons/?selected=Close'>`Close`</a>
 - <a href='https://mui.com/material-ui/api/linear-progress/'>`Linear Progress`</a>
 
-### Markdown Response Styling
+#### Markdown Response Styling
 - <a href='https://www.npmjs.com/package/react-markdown/v/8.0.6'>`react-markdown`</a>
 - <a href='https://www.npmjs.com/package/react-syntax-highlighter'>`react-syntax-highlighter`</a>
+
+#### HTML Parse
+- <a href='https://cheerio.js.org/'>`Cheerio`</a>
 
 ## Usage
 ### Installation
@@ -29,15 +52,16 @@ yarn add docs-chat-assistant
 ```
 
 ### Setup
-#### Create your OpenAI tools
-1. First create a vector store <a href='https://platform.openai.com/storage/vector_stores'>here</a>
-   - Please note that this library only supports Open AI vector stores at the moment.
+#### OpenAI tools
+1. First create a vector store <a href='https://platform.openai.com/storage/vector_stores'>here</a>.
+   - Please note that this library only supports OpenAI vector stores at the moment.
 2. At the bottom right of your created vector store, click ` + Create assistant ` to generate a new assistant.
 3. Navigate to the <a href='https://platform.openai.com/assistants/'>Assistants page</a>, select the newly generated assistant, and ensure that `File search` is enabled and the proper vector store is attached.
 4. Optional: Provide thorough instructions to the assistant for best response outputs.
    - e.g., "You are a helpful chat assistant for `'YOUR PRODUCT'`. Only answer questions relating to `'YOUR PRODUCT'`, and use the attached vector store to retrieve sources."
 
-#### Set your variables in a `.env` file
+#### Environemnt variables
+Set your variables in a .env file.
 ```.env
 OPENAI_API_KEY="YOUR OPENAI API KEY"
 OPENAI_ASSISTANT_ID="YOUR OPENAI ASSISTANT ID"
@@ -160,6 +184,48 @@ Props of the Modal element.
 | titleVariant | `'body1'` &#124; `'body2'` &#124; `'caption'` &#124; <br/> `'h1'` &#124; `'h2'` &#124; `'h3'` &#124; <br/> `'h4'` &#124; `'h5'` &#124; `'h6'` &#124; <br/> `'subtitle1'` &#124; `'subtitle2'` | `'h5'` | Applies MUI Typography variant theme to Modal title. |
 | zIndex | `(string & {})` &#124; `(number & {})` | `'2'` | Z-order of the Modal. |
 
+### Example
+This example uses all the available props.
+
+```javascript
+import { OpenAIAssistant } from 'docs-chat-assistnant'
+
+export default function Home() {
+    return (
+        <>
+            <Assistant
+                title="Docs AI Assistant" //required
+                apiRoute="/api/assistant" //required
+                buttonLabel="Docs AI"
+                color="purple"
+                FabProps={{
+                    borderRadius: ".5rem",
+                    bottom: 40,
+                    fontSize: "0.7rem",
+                    height: 70,
+                    right: 40,
+                    variant: "extended",
+                    width: 70,
+                    zIndex: 2
+                }}
+                formLabel="Ask me anything!!"
+                icon={RobotToyIcon}
+                iconSize="large"    //this won't have any effect
+                instructions="You are a helpful chat assistant."
+                ModalProps={{
+                    maxWidth: "sm",
+                    titleVariant: "h4",
+                    zIndex: 3
+                }}
+                placeholder="Ask me any question, and I'll try my best to answer it for you!"
+            />
+        </>
+    );
+}
+```
+![](exampleButton.png)
+![](exampleModal.png) 
+
 <br/>
 
 ## Limitations (05/2024)
@@ -173,6 +239,7 @@ The following are limitations to this NPM package:
 - Compatibility with other frameworks.
   - Currently, this package is only compatible with Next.js because it utilizes its seamless API capabilities.
   - Testing with Express has not gone well because the current API methods return a fetch API Response object. There is no easy conversion from one to the other, especially when dealing with ReadableStreams. There is a method called `fromWeb()` that may make the conversion simpler; however, it is labeled as experimental and should not be used in production level code.
+- This package does not support other LLMs or Vector Stores.
 - The Assistant API is not protected. While not technically a large issue since the concept is built around client-side interactions with your OpenAI Assistant, it could be abused if a user spams messages.
   - A great workaround is to set a rate limit on the frequency of API calls that can be made.
   - Another workaround is by implementing JWT/refresh tokens. however, the API doesn't include that out-of-the-box yet. This will likely be included in future versions.
@@ -181,3 +248,7 @@ The following are limitations to this NPM package:
 
 ## LICENSE
 [MIT](LICENSE)
+
+<br/>
+
+### Contributions are welcome!!

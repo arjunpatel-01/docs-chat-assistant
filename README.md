@@ -176,3 +176,8 @@ The following are limitations to this NPM package:
 - The Assistant API is not protected. While not technically a large issue since the concept is built around client-side interactions with your OpenAI Assistant, it could be abused if a user spams messages.
   - A great workaround is to set a rate limit on the frequency of API calls that can be made.
   - Another workaround is by implementing JWT/refresh tokens. however, the API doesn't include that out-of-the-box yet. This will likely be included in future versions.
+
+<br/>
+
+## LICENSE
+[MIT](LICENSE)

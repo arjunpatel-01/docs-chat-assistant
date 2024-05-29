@@ -60,7 +60,7 @@ yarn add docs-chat-assistant
 4. Optional: Provide thorough instructions to the assistant for best response outputs.
    - e.g., "You are a helpful chat assistant for `'YOUR PRODUCT'`. Only answer questions relating to `'YOUR PRODUCT'`, and use the attached vector store to retrieve sources."
 
-#### Environemnt variables
+#### Environment variables
 Set your variables in a .env file.
 ```.env
 OPENAI_API_KEY="YOUR OPENAI API KEY"

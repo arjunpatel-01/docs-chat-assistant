@@ -8,14 +8,14 @@
   "type": "module",
   "exports": {
     ".": {
-        "import": "./dist/docs-chat-assistant.js",
-        "require": "./dist/docs-chat-assistant.cjs"
+      "import": "./dist/docs-chat-assistant.js",
+      "require": "./dist/docs-chat-assistant.cjs"
     },
-    "./api":{
-        "import": "./dist/api/docs-chat-assistant.js",
-        "require": "./dist/api/docs-chat-assistant.cjs"
+    "./api": {
+      "import": "./dist/api/docs-chat-assistant.js",
+      "require": "./dist/api/docs-chat-assistant.cjs"
     }
-},
+  },
   "scripts": {
     "build": "tsup"
   },
@@ -26,6 +26,13 @@
   ],
   "author": "arjunpatel-01",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arjunpatel-01/docs-chat-assistant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arjunpatel-01/docs-chat-assistant/issues"
+  },
   "devDependencies": {
     "@types/react-syntax-highlighter": "^15.5.13",
     "react": "^18.3.1",

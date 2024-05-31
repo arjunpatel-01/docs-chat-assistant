@@ -210,7 +210,7 @@ import SmartToyIcon from '@mui/icons-material/SmartToy';
 export default function Home() {
     return (
         <>
-            <Assistant
+            <OpenAIAssistant
                 title="Docs AI Assistant" //required
                 apiRoute="/api/assistant" //required
                 buttonLabel="Docs AI"

@@ -118,26 +118,26 @@ This method receives a `Request` containing a `message`, optional `instructions`
 Usage:
 ```javascript
 // example path: api/assistant/route.js
-import { USE_ASSISTANT } from "docs-chat-assistant"
-export { USE_ASSISTANT as POST }
+import { NEXT_ASSISTANT_API } from "docs-chat-assistant/api"
+export { NEXT_ASSISTANT_API as POST }
 ```
 
 ##### `Web Crawler API`: 
-This method receives an `input` object containing a `base_url` to crawl. The host is extracted from the url, and the function iteratively retrieves all links from each page in a Breadth First Search manner. As the method visits each page, the contents are stored in files in a temporary directory. Finally, the files are uploaded to the vector store and the temporary directory is deleted. The function returns a Response with a `status` code and a `JSON body`.
+This method receives an `string`containing a `base_url` to crawl. The host is extracted from the url, and the function iteratively retrieves all links from each page in a Breadth First Search manner. As the method visits each page, the contents are stored in files in a temporary directory. Finally, the files are uploaded to the vector store and the temporary directory is deleted. The function returns a Response with a `status` code and a `JSON body`.
 
 **PLEASE NOTE THAT THIS METHOD SHOULD BE LOCKED BEHIND ADMIN PRIVILEDGES (AUTHENTICATION) BECAUSE IT DIRECTLY UPLOAD TO THE VECTOR STORE.**
 
 Usage example:
 ```javascript
 //example path: api/crawler/route.js
-import { WEB_CRAWLER } from "doc-chat-assistant"
+import { WEB_CRAWLER } from "docs-chat-assistant/api"
 export async function POST(request) {
   const body = await request.json();
 
   //ensure this is protected by admin priviledges
 
-  const input = { base_url: body.base_url }
-  return await WEB_CRAWLER(input);
+  const base_url = body.base_url;
+  return await WEB_CRAWLER(base_url);
 }
 ```
 

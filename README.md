@@ -118,19 +118,35 @@ This method receives a `Request` containing a `message`, optional `instructions`
 Usage:
 ```javascript
 // example path: api/assistant/route.js
-import { NEXT_ASSISTANT_API } from "docs-chat-assistant/api"
+import { assistantKeys, NEXT_ASSISTANT_API } from "docs-chat-assistant/api"
+
+assistantKeys.setKeys({
+    OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+    OPENAI_ASSISTANT_ID: process.env.OPENAI_ASSISTANT_ID
+});
+
 export { NEXT_ASSISTANT_API as POST }
 ```
 
 ##### `Web Crawler API`: 
 This method receives an `string`containing a `base_url` to crawl. The host is extracted from the url, and the function iteratively retrieves all links from each page in a Breadth First Search manner. As the method visits each page, the contents are stored in files in a temporary directory. Finally, the files are uploaded to the vector store and the temporary directory is deleted. The function returns a Response with a `status` code and a `JSON body`.
 
+`parameters` - `base_url`: string
+
+`returns` - `Response` that contains `status`, and `message` | `error_message` as JSON body
+
 **PLEASE NOTE THAT THIS METHOD SHOULD BE LOCKED BEHIND ADMIN PRIVILEDGES (AUTHENTICATION) BECAUSE IT DIRECTLY UPLOAD TO THE VECTOR STORE.**
 
 Usage example:
 ```javascript
 //example path: api/crawler/route.js
-import { WEB_CRAWLER } from "docs-chat-assistant/api"
+import { assistantKeys, WEB_CRAWLER } from "docs-chat-assistant/api"
+
+assistantKeys.setKeys({
+    OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+    OPENAI_VECTORSTORE_ID: process.env.OPENAI_VECTORSTORE_ID
+});
+
 export async function POST(request) {
   const body = await request.json();
 
@@ -189,6 +205,7 @@ This example uses all the available props.
 
 ```javascript
 import { OpenAIAssistant } from 'docs-chat-assistnant'
+import SmartToyIcon from '@mui/icons-material/SmartToy';
 
 export default function Home() {
     return (
@@ -209,7 +226,7 @@ export default function Home() {
                     zIndex: 2
                 }}
                 formLabel="Ask me anything!!"
-                icon={RobotToyIcon}
+                icon={<SmartToyIcon />}
                 iconSize="large"    //this won't have any effect
                 instructions="You are a helpful chat assistant."
                 ModalProps={{

@@ -45,12 +45,6 @@ Documentation Chat Assistant component for `Next.js` using <a href='https://mui.
 npm install docs-chat-assistant
 ```
 
-or
-
-```bash
-yarn add docs-chat-assistant
-```
-
 ### Setup
 #### OpenAI tools
 1. First create a vector store <a href='https://platform.openai.com/storage/vector_stores'>here</a>.
@@ -62,7 +56,7 @@ yarn add docs-chat-assistant
 
 #### Environment variables
 Set your variables in a .env file.
-```.env
+```bash
 OPENAI_API_KEY="YOUR OPENAI API KEY"
 OPENAI_ASSISTANT_ID="YOUR OPENAI ASSISTANT ID"
 OPENAI_VECTORSTORE_ID="YOUR OPENAI VECTOR STORE ID"
@@ -99,7 +93,7 @@ export default function Home() {
 First, set up `Next.js` directory structure for APIs. See <a href='https://nextjs.org/docs/app/building-your-application/routing/route-handlers'>Next.js Documentation</a>.
 
 Example directory:
-```
+```bash
 project
 ├── app
 │   ├── api

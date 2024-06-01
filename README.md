@@ -1,6 +1,8 @@
 # Docs Chat Assistant
 Documentation Chat Assistant component for `Next.js` using <a href='https://mui.com/material-ui/'>Material UI (MUI)</a> for component design and <a href='https://platform.openai.com/docs/api-reference/introduction'>OpenAI API</a> for AI Assistant integration and vector store.
 
+Check out a demo site at [docs-chat-assistant-demo.vercel.app](https://docs-chat-assistant-demo.vercel.app/)!!
+
 ## Contents
 - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#tech-stack'>Tech Stack</a>
   - <a href='https://github.com/arjunpatel-01/docs-chat-assistant/?tab=readme-ov-file#material-ui-mui'>Material UI (MUI)</a>
